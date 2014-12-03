@@ -1,6 +1,6 @@
 {
 	"ImportPath": "github.com/coreos/rocket",
-	"GoVersion": "go1.3.1",
+	"GoVersion": "go1.3.3",
 	"Packages": [
 		"./..."
 	],
@@ -18,6 +18,10 @@
 			"ImportPath": "github.com/coreos/go-systemd/unit",
 			"Comment": "v2-41-g415a79c4bfa3",
 			"Rev": "415a79c4bfa377b484b16c632347b3925a0f35ff"
+		},
+		{
+			"ImportPath": "github.com/ghodss/yaml",
+			"Rev": "a4ad25344bbdf7fec4f4675f866b0091fb00e00e"
 		},
 		{
 			"ImportPath": "github.com/gorilla/context",
@@ -49,6 +53,10 @@
 			"ImportPath": "golang.org/x/net/html",
 			"Comment": "null-223",
 			"Rev": "5dedbdc181629d2f3557caf2667e60eb82c5e6d7"
+		},
+		{
+			"ImportPath": "gopkg.in/v2/yaml",
+			"Rev": "d466437aa4adc35830964cffc5b5f262c63ddcb4"
 		}
 	]
 }
