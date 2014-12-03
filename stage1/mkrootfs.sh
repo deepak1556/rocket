@@ -208,6 +208,7 @@ EXTRAS="bin/bash
 	lib64/libdl.so
 	lib64/libdl.so.2
 	lib64/libdl-2.17.so
+	share/zoneinfo/Asia/Kolkata
 	bin/sleep"
 
 # systemd and dependencies
@@ -321,7 +322,7 @@ cat > "${FILELIST}" <<-EOF
 	lib64/systemd/systemd-journal-gatewayd
 EOF
 
-unsquashfs -d "${USR}" -ef "${FILELIST}" "${USRFS}" 
+unsquashfs -d "${USR}" -ef "${FILELIST}" "${USRFS}"
 
 popd
 
@@ -359,7 +360,7 @@ StopWhenUnneeded=true
 DefaultDependencies=false
 
 [Service]
-ExecStart=/usr/bin/sleep 9999999999d 
+ExecStart=/usr/bin/sleep 9999999999d
 ExecStopPost=/usr/bin/systemctl isolate reaper.service
 EOF
 
@@ -384,7 +385,7 @@ shopt -s nullglob
 SYSCTL=/usr/bin/systemctl
 
 cd /opt/stage2
-for app in *; do 
+for app in *; do
         status=$(${SYSCTL} show --property ExecMainStatus "${app}.service")
         echo "${status#*=}" > "/rkt/status/$app"
 done
