@@ -11,7 +11,7 @@ import (
 	"github.com/coreos/rocket/app-container/schema"
 	"github.com/coreos/rocket/pkg/tarheader"
 
-	"github.com/ghodss/yaml"
+	"github.com/coreos/rocket/Godeps/_workspace/src/github.com/ghodss/yaml"
 )
 
 var (
